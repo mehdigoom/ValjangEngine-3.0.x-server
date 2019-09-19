@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const SelectionBox_1 = require("./SelectionBox");
+const TransformHandle_1 = require("./TransformHandle");
+const TransformMarker_1 = require("./TransformMarker");
+const GridHelper_1 = require("./GridHelper");
+SupEngine.registerEditorComponentClass("SelectionBox", SelectionBox_1.default);
+SupEngine.registerEditorComponentClass("TransformHandle", TransformHandle_1.default);
+SupEngine.registerEditorComponentClass("TransformMarker", TransformMarker_1.default);
+SupEngine.registerEditorComponentClass("GridHelper", GridHelper_1.default);

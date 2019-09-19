@@ -1,0 +1,41 @@
+/* tslint:disable:no-unused-variable */
+import * as obj from "./obj";
+import * as gltf from "./gltf";
+/* tslint:enable:no-unused-variable */
+
+export interface ImportLogEntry {
+  file: string;
+  line: number;
+  type: string;
+  message: string;
+}
+
+export function createLogError(message: string, file?: string, line?: number) { return { file, line, type: "error", message }; }
+export function createLogWarning(message: string, file?: string, line?: number) { return { file, line, type: "warning", message }; }
+export function createLogInfo(message: string, file?: string, line?: number) { return { file, line, type: "info", message }; }
+
+export interface ImportCallback {
+  (log: ImportLogEntry[], result?: any): void;
+}
+
+interface Importer {
+  importModel: (files: File[], callback: ImportCallback) => any;
+}
+
+const modelImporters: { [extension: string]: Importer } = { obj, gltf };
+
+export default function(files: File[], callback: ImportCallback) {
+  let modelImporter: Importer = null;
+
+  for (const file of files) {
+    const filename = file.name;
+    const extension = filename.substring(filename.lastIndexOf(".") + 1).toLowerCase();
+    modelImporter = modelImporters[extension];
+    if (modelImporter != null) break;
+  }
+
+  if (modelImporter == null) { callback([ createLogError("No compatible importer found") ]); return; }
+
+  modelImporter.importModel(files, callback);
+  return;
+}

@@ -1,0 +1,16 @@
+{
+    "name": "ValjangEngine-game-extra-p2js-plugin",
+    "description": "p2.js 2D physics plugin for ValjangEngine Game, the HTML5 2D+3D game maker",
+    "version": "1.0.0",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ValjangEngine/ValjangEngine-game.git"
+    },
+    "scripts": {
+        "build": "gulp --gulpfile=../../../../../scripts/pluginGulpfile.js --cwd=."
+    },
+    "dependencies": {
+        "p2": "^0.7.1"
+    }
+}

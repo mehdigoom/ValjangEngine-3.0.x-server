@@ -1,0 +1,17 @@
+{
+  "ModelRenderer": {
+    "label": "Рендер Модели",
+    "model": "Модель",
+    "searchModelPlaceholder": "Поиск по моделям",
+    "animation": "Анимация",
+    "shadow": {
+      "title": "Тень",
+      "cast": "Отбрасывание",
+      "receive": "Получение"
+    },
+    "color": "Цвет",
+    "opacity": "Прозрачность",
+    "material": "Материал",
+    "shader": "Шейдер"
+  }
+}

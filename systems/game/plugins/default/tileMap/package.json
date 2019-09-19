@@ -1,0 +1,13 @@
+{
+    "name": "ValjangEngine-game-default-tile-map-plugin",
+    "description": "2D tile map plugin for ValjangEngine Game, the HTML5 2D+3D game maker",
+    "version": "1.0.0",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ValjangEngine/ValjangEngine-game.git"
+    },
+    "scripts": {
+        "build": "gulp --gulpfile=../../../../../scripts/pluginGulpfile.js --cwd=."
+    }
+}

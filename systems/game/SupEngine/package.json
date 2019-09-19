@@ -1,0 +1,17 @@
+{
+    "name": "ValjangEngine-engine",
+    "description": "Three.js-based game engine for ValjangEngine Game, the HTML5 2D+3D game maker",
+    "version": "1.0.0",
+    "license": "ISC",
+    "main": "src/index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ValjangEngine/ValjangEngine-game.git"
+    },
+    "dependencies": {
+        "three": "0.81.2"
+    },
+    "devDependencies": {
+        "@types/three": "0.81.1"
+    }
+}

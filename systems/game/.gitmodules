@@ -1,0 +1,4 @@
+[submodule "plugins/common"]
+	path = plugins/common
+	url = https://github.com/mehdigoom/ValjangEngine-3.0.x-Gameapi.git
+	branch = master

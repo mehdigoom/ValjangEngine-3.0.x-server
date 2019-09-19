@@ -1,0 +1,17 @@
+{
+  "ModelRenderer": {
+    "label": "Model Renderer",
+    "model": "Model",
+    "searchModelPlaceholder": "Search for a model",
+    "animation": "Animation",
+    "shadow": {
+      "title": "Shadow",
+      "cast": "Cast",
+      "receive": "Receive"
+    },
+    "color": "Color",
+    "opacity": "Opacity",
+    "material": "Material",
+    "shader": "Shader"
+  }
+}

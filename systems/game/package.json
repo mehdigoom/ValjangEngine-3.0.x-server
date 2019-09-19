@@ -1,0 +1,13 @@
+{
+    "name": "ValjangEngine-game",
+    "description": "Three.js-based game development system for ValjangEngine, the HTML5 app for real-time collaborative projects",
+    "version": "5.0.0",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ValjangEngine/ValjangEngine-game.git"
+    },
+    "ValjangEngine": {
+        "systemId": "game"
+    }
+}

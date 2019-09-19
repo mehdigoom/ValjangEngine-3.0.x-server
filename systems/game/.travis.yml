@@ -1,0 +1,36 @@
+sudo: false
+language: node_js
+node_js: "node"
+# Skip "npm install" since "npm run build" takes care of it below
+install: true
+before_script:
+- cd ..
+- git clone https://github.com/ValjangEngine/ValjangEngine-core.git
+- cd ValjangEngine-core
+- mkdir systems
+- mv ../ValjangEngine-game systems/game
+- ls -l systems
+cache:
+  directories:
+  - node_modules
+script:
+- npm run build
+notifications:
+  webhooks:
+    urls:
+    - https://webhooks.gitter.im/e/44f5607466509af53a93
+    on_success: change
+    on_failure: always
+    on_start: never
+before_deploy:
+- npm run package game
+deploy:
+  provider: releases
+  api_key:
+    secure: n4bzbTSTwYLNXyPwwlBzMOivlh53dGOITLu53s6zsLoVpyyNHo0T9RCwMkrhTm8xUvtgicPTvCU72DxthD5WC0t3w/YNY+6+oTZbwRpCHjDv26tHshQMMb4hVtBM/TPQ/OfxmXH+O7CKOY64LcFq2kiUeXrlussGp2kQWg3wAwPpYtcdpaRTFlYfh692Rg35HvceUnxrTj8CavnHtQ1L0Iy9ncv6xUxtDiCxcgH8unZl4DyRZ2+WZ2TLxT01OdN66bB64WXFQSUYWEcI9eijhqNerzsX+9lKYOn7CK+KvmxllQJ3M19KwZ+JWkOKxSqDvKDKaQX9pJzX/k4nB0BHspplPsyj7Rg6B7fDz1Zm2WdbaLYuAXPF3jvo+6gHmJ7lETq8kFByLuEAtnM3sBcA/+r8qmV2yy9zcb0oZI4QZvg63Sq2D+ei/MgIN2mwIol6JoknmfdYcdAFBcGgHwMngkHNCG/eoPDSPZJjDJCRssSn7KduXUDMCK2EQtNuCGPHxuxV3PesTh7asEQbYJStbZMYkvY5QtjV9L1AgyHHwCoDXQ415oLdILAzGC0M6tUdcKEMb07WiIcHMTW9HNLLVvhLIKfMexBlXHg2+qGfKeR1XffKmvEK5WI7zKb3Vh0Wm/KYgPj+DcUOp2aZv5gdIqOS1jZ/qa5r7LHebc8sDfY=
+  file_glob: true
+  file: "packages/ValjangEngine-game-*.zip"
+  skip_cleanup: true
+  on:
+    repo: ValjangEngine/ValjangEngine-game
+    tags: true

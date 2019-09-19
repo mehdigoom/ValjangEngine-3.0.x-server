@@ -1,0 +1,13 @@
+{
+    "name": "ValjangEngine-game-extra-event-emitter-plugin",
+    "description": "Event emitter plugin for ValjangEngine Game, the HTML5 collaborative creative platform",
+    "version": "1.0.0",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ValjangEngine/ValjangEngine-game.git"
+    },
+    "scripts": {
+        "build": "gulp --gulpfile=../../../../../scripts/pluginGulpfile.js --cwd=."
+    }
+}
