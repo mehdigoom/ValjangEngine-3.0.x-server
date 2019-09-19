@@ -1,0 +1,20 @@
+{
+    "name": "ValjangEngine-common-text-editor-widget-plugin",
+    "description": "Collaborative text editor widget for ValjangEngine, the HTML5 app for real-time collaborative projects",
+    "version": "1.0.0",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ValjangEngine/ValjangEngine-common-plugins.git"
+    },
+    "scripts": {
+        "build": "gulp --gulpfile=../../../../../scripts/pluginGulpfile.js --cwd=. --silent && gulp --gulpfile=widgetGulpfile.js"
+    },
+    "dependencies": {
+        "operational-transform": "^0.2.3"
+    },
+    "devDependencies": {
+        "@types/codemirror": "0.0.34",
+        "codemirror": "^5.16.0"
+    }
+}

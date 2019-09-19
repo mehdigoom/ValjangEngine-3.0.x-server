@@ -21,7 +21,7 @@ class TextRendererConfig extends SupCore.Data.Base.ComponentConfig {
             return false;
         if (pub.formatVersion == null) {
             pub.formatVersion = 1;
-            // NOTE: Legacy stuff from ValjangEngine 0.7
+            // NOTE: Legacy stuff from Superpowers 0.7
             if (pub.color != null && pub.color.length !== 6)
                 pub.color = "ffffff";
             // NOTE: Migration from old "align" property

@@ -49,7 +49,7 @@ class ModelAsset extends SupCore.Data.Base.Asset {
         let pub;
         const loadAttributesMaps = () => {
             const mapNames = pub.maps;
-            // NOTE: "diffuse" was renamed to "map" in ValjangEngine 0.11
+            // NOTE: "diffuse" was renamed to "map" in Superpowers 0.11
             if (pub.formatVersion == null && mapNames.length === 1 && mapNames[0] === "diffuse")
                 mapNames[0] = "map";
             pub.maps = {};
@@ -73,7 +73,7 @@ class ModelAsset extends SupCore.Data.Base.Asset {
                         fs.readFile(path.join(assetPath, `map-${key}.dat`), (err, buffer) => {
                             // TODO: Handle error but ignore ENOENT
                             if (err != null) {
-                                // NOTE: "diffuse" was renamed to "map" in ValjangEngine 0.11
+                                // NOTE: "diffuse" was renamed to "map" in Superpowers 0.11
                                 if (err.code === "ENOENT" && key === "map") {
                                     fs.readFile(path.join(assetPath, "map-diffuse.dat"), (err, buffer) => {
                                         fs.rename(path.join(assetPath, "map-diffuse.dat"), path.join(assetPath, "map-map.dat"), (err) => {
@@ -94,7 +94,7 @@ class ModelAsset extends SupCore.Data.Base.Asset {
             ], (err) => { this._onLoaded(assetPath, pub); });
         };
         fs.readFile(path.join(assetPath, "model.json"), { encoding: "utf8" }, (err, json) => {
-            // NOTE: "asset.json" was renamed to "model.json" in ValjangEngine 0.11
+            // NOTE: "asset.json" was renamed to "model.json" in Superpowers 0.11
             if (err != null && err.code === "ENOENT") {
                 fs.readFile(path.join(assetPath, "asset.json"), { encoding: "utf8" }, (err, json) => {
                     fs.rename(path.join(assetPath, "asset.json"), path.join(assetPath, "model.json"), (err) => {
@@ -115,7 +115,7 @@ class ModelAsset extends SupCore.Data.Base.Asset {
             return;
         }
         if (pub.formatVersion == null) {
-            // NOTE: New settings introduced in ValjangEngine 0.8
+            // NOTE: New settings introduced in Superpowers 0.8
             if (typeof pub.opacity === "undefined")
                 pub.opacity = 1;
             if (pub.advancedTextures == null) {
@@ -130,7 +130,7 @@ class ModelAsset extends SupCore.Data.Base.Asset {
             }
             if (pub.unitRatio == null)
                 pub.unitRatio = 1;
-            // NOTE: Filtering and wrapping were introduced in ValjangEngine 0.13
+            // NOTE: Filtering and wrapping were introduced in Superpowers 0.13
             if (pub.filtering == null)
                 pub.filtering = "pixelated";
             if (pub.wrapping == null)

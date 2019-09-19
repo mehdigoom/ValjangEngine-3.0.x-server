@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    link(rel="stylesheet", href="/styles/reset.css")
+    link(rel="stylesheet", href="index.css")
+    title Home
+  body
+    .main
+      .project-info
+        // TODO: If in browser, add button to add to/open in ValjangEngine
+      .chat
+        ol
+      .chat-input
+        textarea(placeholder= t("home:links.chatPlaceholder"),maxlength=300)
+    .sidebar
+      .links
+        ul
+          li
+            a(href="http://ValjangEngine-html5.com/",target="_blank")= t("home:links.officialWebsite")
+          li
+            a(href="http://docs.ValjangEngine-html5.com/en/development/roadmap",target="_blank")= t("home:links.devRoadmap")
+          li
+            a(href="http://itch.io/engine/ValjangEngine/community",target="_blank")= t("home:links.communityForums")
+      .members
+        ul
+
+    script(src="/SupCore.js")
+    script(src="/SupClient.js")
+    script(src="index.js")

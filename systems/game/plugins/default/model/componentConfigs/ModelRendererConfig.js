@@ -22,19 +22,19 @@ class ModelRendererConfig extends SupCore.Data.Base.ComponentConfig {
             return false;
         if (pub.formatVersion == null) {
             pub.formatVersion = 1;
-            // NOTE: overrideOpacity was introduced in ValjangEngine 0.8
+            // NOTE: overrideOpacity was introduced in Superpowers 0.8
             if (pub.overrideOpacity == null)
                 pub.overrideOpacity = false;
             if (pub.color == null)
                 pub.color = "ffffff";
-            // NOTE: These settings were introduced in ValjangEngine 0.7
+            // NOTE: These settings were introduced in Superpowers 0.7
             if (pub.castShadow == null)
                 pub.castShadow = false;
             if (pub.receiveShadow == null)
                 pub.receiveShadow = false;
             if (pub.materialType == null)
                 pub.materialType = "basic";
-            // NOTE: Legacy stuff from ValjangEngine 0.4
+            // NOTE: Legacy stuff from Superpowers 0.4
             if (typeof pub.modelAssetId === "number")
                 pub.modelAssetId = pub.modelAssetId.toString();
             if (typeof pub.animationId === "number")

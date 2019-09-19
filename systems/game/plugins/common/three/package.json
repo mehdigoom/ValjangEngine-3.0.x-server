@@ -1,0 +1,19 @@
+{
+    "name": "ValjangEngine-common-three-plugin",
+    "description": "Three.js for ValjangEngine, the HTML5 app for real-time collaborative projects",
+    "version": "1.0.0",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ValjangEngine/ValjangEngine-common-plugins.git"
+    },
+    "scripts": {
+        "build": "gulp --gulpfile=../../../../../scripts/pluginGulpfile.js --cwd=. --silent && gulp --gulpfile=mainGulpfile.js"
+    },
+    "dependencies": {
+        "three": "^0.87.1"
+    },
+    "devDependencies": {
+        "@types/three": "0.0.24"
+    }
+}

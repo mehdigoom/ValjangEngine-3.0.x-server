@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const GridHelper_1 = require("./GridHelper");
+const SelectionBoxRenderer_1 = require("./SelectionBoxRenderer");
+const TransformControls_1 = require("./TransformControls");
+const TransformMarker_1 = require("./TransformMarker");
+const TransformGizmos_1 = require("./TransformGizmos");
+global.SupTHREE.GridHelper = GridHelper_1.default;
+global.SupTHREE.SelectionBoxRenderer = SelectionBoxRenderer_1.default;
+global.SupTHREE.TransformControls = TransformControls_1.default;
+global.SupTHREE.TransformMarker = TransformMarker_1.default;
+global.SupTHREE.GizmoMaterial = TransformGizmos_1.GizmoMaterial;

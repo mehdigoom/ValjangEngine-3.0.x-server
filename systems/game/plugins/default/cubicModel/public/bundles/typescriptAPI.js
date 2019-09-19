@@ -1,0 +1,16 @@
+(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+"use strict";
+/// <reference path="../../typescript/typescriptAPI/TypeScriptAPIPlugin.d.ts" />
+Object.defineProperty(exports, "__esModule", { value: true });
+
+SupCore.system.registerPlugin("typescriptAPI", "Sup.CubicModel", {
+    code: "namespace Sup {\r\n  export class CubicModel extends Asset {\r\n    getPixelsPerUnit() { return this.__inner.pixelsPerUnit; }\r\n  }\r\n}\r\n",
+    defs: "declare namespace Sup {\r\n  class CubicModel extends Asset {\r\n    getPixelsPerUnit(): number;\r\n  }\r\n}\r\n",
+});
+SupCore.system.registerPlugin("typescriptAPI", "CubicModelRenderer", {
+    code: "namespace Sup {\r\n  let materialTypes = [\"basic\", \"phong\"];\r\n\r\n  export class CubicModelRenderer extends Sup.ActorComponent {\r\n    constructor(actor: Actor, pathOrAsset: string|CubicModel, materialIndex: number) {\r\n      super(actor);\r\n      this.__inner = new SupEngine.componentClasses.CubicModelRenderer(this.actor.__inner);\r\n      if (pathOrAsset != null) {\r\n        let cubicModelAsset = (typeof pathOrAsset === \"string\") ? get(pathOrAsset, CubicModel) : <CubicModel>pathOrAsset;\r\n        this.__inner.opacity = cubicModelAsset.__inner.opacity;\r\n        this.setCubicModel(cubicModelAsset, materialIndex);\r\n      }\r\n      this.__inner.__outer = this;\r\n      this.actor.cubicModelRenderer = this;\r\n    }\r\n    destroy() {\r\n      this.actor.cubicModelRenderer = null;\r\n      super.destroy();\r\n    }\r\n\r\n    getCubicModel() { return (this.__inner.asset != null) ? this.__inner.asset.__outer : null; }\r\n    setCubicModel(pathOrAsset: string|CubicModel, materialIndex: number) {\r\n      let material: string;\r\n      if (materialIndex != null) material = materialTypes[materialIndex];\r\n\r\n      let cubicModelAsset = (typeof pathOrAsset === \"string\") ? get(pathOrAsset, CubicModel) : <CubicModel>pathOrAsset;\r\n      this.__inner.setCubicModel((cubicModelAsset != null) ? cubicModelAsset.__inner : null, material);\r\n      return this;\r\n    }\r\n  }\r\n\r\n  export namespace CubicModelRenderer {\r\n    export enum MaterialType { Basic, Phong };\r\n  }\r\n}\r\n",
+    defs: "declare namespace Sup {\r\n  class CubicModelRenderer extends ActorComponent {\r\n    constructor(actor: Actor, pathOrAsset?: string|CubicModel, materialType?: CubicModelRenderer.MaterialType );\r\n\r\n    getCubicModel(): CubicModel;\r\n    setCubicModel(pathOrAsset: string|CubicModel, materialType?: CubicModelRenderer.MaterialType): CubicModelRenderer;\r\n  }\r\n\r\n  namespace CubicModelRenderer {\r\n    enum MaterialType { Basic, Phong }\r\n  }\r\n}\r\n",
+    exposeActorComponent: { propertyName: "cubicModelRenderer", className: "Sup.CubicModelRenderer" }
+});
+
+},{}]},{},[1]);

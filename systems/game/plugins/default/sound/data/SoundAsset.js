@@ -13,7 +13,7 @@ class SoundAsset extends SupCore.Data.Base.Asset {
     load(assetPath) {
         let pub;
         fs.readFile(path.join(assetPath, "sound.json"), { encoding: "utf8" }, (err, json) => {
-            // NOTE: "asset.json" was renamed to "sound.json" in ValjangEngine 0.11
+            // NOTE: "asset.json" was renamed to "sound.json" in Superpowers 0.11
             if (err != null && err.code === "ENOENT") {
                 fs.readFile(path.join(assetPath, "asset.json"), { encoding: "utf8" }, (err, json) => {
                     fs.rename(path.join(assetPath, "asset.json"), path.join(assetPath, "sound.json"), (err) => {

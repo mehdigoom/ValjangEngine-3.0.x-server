@@ -1,0 +1,19 @@
+{
+    "name": "ValjangEngine-common-documentation-plugin",
+    "description": "Documentation plugin for ValjangEngine, the HTML5 app for real-time collaborative projects",
+    "version": "1.0.0",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ValjangEngine/ValjangEngine-common-plugins.git"
+    },
+    "scripts": {
+        "build": "gulp --gulpfile=../../../../../scripts/pluginGulpfile.js --cwd=."
+    },
+    "dependencies": {
+        "marked": "^0.6.1"
+    },
+    "devDependencies": {
+        "@types/marked": "^0.6.2"
+    }
+}
