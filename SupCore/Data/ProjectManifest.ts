@@ -23,8 +23,8 @@ export default class ProjectManifest extends Hash {
     if (pub.formatVersion == null) pub.formatVersion = 0;
 
     if (pub.formatVersion > ProjectManifest.currentFormatVersion) {
-      throw new Error("This project was created using a more recent version of Superpowers and cannot be loaded. " +
-      `Format version is ${pub.formatVersion} but this version of Superpowers only supports up to ${ProjectManifest.currentFormatVersion}.`);
+      throw new Error("This project was created using a more recent version of ValjangEngine and cannot be loaded. " +
+      `Format version is ${pub.formatVersion} but this version of ValjangEngine only supports up to ${ProjectManifest.currentFormatVersion}.`);
     }
 
     const oldFormatVersion = pub.formatVersion;

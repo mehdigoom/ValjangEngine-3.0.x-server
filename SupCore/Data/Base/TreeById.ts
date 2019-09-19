@@ -25,7 +25,7 @@ export default class TreeById extends EventEmitter {
 
     let maxNodeId = -1;
     this.walk((node, parentNode) => {
-      // NOTE: Legacy stuff from Superpowers 0.4
+      // NOTE: Legacy stuff from ValjangEngine 0.4
       if (typeof node.id === "number") node.id = (node.id as number).toString();
 
       maxNodeId = Math.max(maxNodeId, parseInt(node.id, 10));

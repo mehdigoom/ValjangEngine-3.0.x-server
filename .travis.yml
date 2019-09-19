@@ -22,8 +22,8 @@ deploy:
   api_key:
     secure: ihYZuq2hqd/dAYskD3jZ1L4TQq/HI3vj2PlL0mvOFi4Husu3HU7x3GjHcUiA1l8pRxIxmZE6hxGL73Lp0x3xnrnE2EDmccM3ZQ7FDoY0NHpVU3V6FK2SUOB923jHJ2mBwsSqOzK2/ZFlXddFiFsSx0K///JYopZsaEam17GWxopk4ANIeqjCgO1c9dslKYPOqSYeJeQPU/kEZB0dSz1Wyno5WiCDsmg1wszctsbhgX25NCRRMbn4R3MSxfNgHCo9L71FlRiM3u2mjFldhuVVmvGsNH0DIoFIpGuPpura0V0et7OTeD5Mv2OH6h3Py7KxmiT3nCx8+cQWgoLNO78y02c6Jplklo8VyumZTmACykcpeilheYSeouY89xNIY+HFRhBnoqFmwlM8kQG5hpg1ScQL43fqmWRTFEGrPOZwYtdC3KnkSkLBs755WjIO9/dHsxOmW47YQM08ce6IYgg9Xvrtu5ekB25ZTsPxbKSxYZ460gaaRNQbUHJHkyjmxJW9L4PYd92GBuPauUojtEC5UrOI6cvmKUQUtdhIQZn3QwKOiRX4XEWgkSefkjFmMWrJa01i7LzoMKGmBPzhpz9NlqKI03B1mYAVDBDgEzPM6hP+2ejNL2Wg+6loFWPjNCi2S0KVb5AcBs7HpwiLV6plRn998ymwQX6fsl2yn+DjC6Y=
   file_glob: true
-  file: "packages/superpowers-core-*.zip"
+  file: "packages/ValjangEngine-core-*.zip"
   skip_cleanup: true
   on:
-    repo: superpowers/superpowers-core
+    repo: ValjangEngine/ValjangEngine-core
     tags: true

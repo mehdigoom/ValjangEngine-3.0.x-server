@@ -6,20 +6,7 @@ npm-debug.log
 /sessions.json
 /authorizationsByOrigin.json
 
-SupCore/**/*.js
-SupClient/**/*.js
-server/**/*.js
-client/**/*.js
-!gulpfile.js
 
-public/*
-!public/locales
-!public/images
-!public/fonts
-!public/favicon.ico
-
-workbench/
 packages/
-systems/
-projects/
+
 builds/

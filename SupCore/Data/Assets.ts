@@ -30,7 +30,7 @@ export default class Assets extends SupData.Base.Dictionary {
 
     const asset = new assetClass(id, null, this.server);
 
-    // NOTE: The way assets are laid out on disk was changed in Superpowers 0.11
+    // NOTE: The way assets are laid out on disk was changed in ValjangEngine 0.11
     const oldDirPath = path.join(this.server.projectPath, `assets/${id}`);
     fs.stat(oldDirPath, (err, stats) => {
       const dirPath = path.join(this.server.projectPath, `assets/${this.server.data.entries.getStoragePathFromId(id)}`);

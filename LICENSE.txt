@@ -1,9 +1,9 @@
-Superpowers is distributed under the ISC license,
+ValjangEngine is distributed under the ISC license,
 in the hope of making it as useful as possible for everyone.
 https://en.wikipedia.org/wiki/ISC_license
 
 We are a welcoming community and we'd love to have you contributing!
-https://github.com/superpowers
+https://github.com/ValjangEngine
 
 ------------------------------------------------------------------------------
 

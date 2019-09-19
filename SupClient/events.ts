@@ -7,7 +7,7 @@ export function setupHelpCallback(callback: Function) {
 }
 
 // Development mode
-if (localStorage.getItem("superpowers-dev-mode") != null && window.top != null) window.onerror = onError;
+if (localStorage.getItem("ValjangEngine-dev-mode") != null && window.top != null) window.onerror = onError;
 
 function onError() {
   window.top.postMessage({ type: "error" }, window.location.origin);

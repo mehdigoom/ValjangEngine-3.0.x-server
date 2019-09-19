@@ -81,7 +81,7 @@ export function onAssetTrashed() {
   h1.textContent = "This asset has been trashed.";
 
   const div = document.createElement("div");
-  div.className = "superpowers-error";
+  div.className = "ValjangEngine-error";
   div.appendChild(h1);
   document.body.appendChild(div);
 }
@@ -97,7 +97,7 @@ export function onDisconnected() {
   button.addEventListener("click", () => { location.reload(); });
 
   const div = document.createElement("div");
-  div.className = "superpowers-error";
+  div.className = "ValjangEngine-error";
   div.appendChild(h1);
   div.appendChild(button);
   document.body.appendChild(div);

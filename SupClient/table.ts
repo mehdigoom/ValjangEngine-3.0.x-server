@@ -219,7 +219,7 @@ export function appendAssetField(parent: HTMLElement, assetId: string, assetType
     if (!buttonElt.disabled) event.preventDefault();
   });
   textField.addEventListener("drop", (event) => {
-    const entryId = event.dataTransfer.getData("application/vnd.superpowers.entry").split(",")[0];
+    const entryId = event.dataTransfer.getData("application/vnd.ValjangEngine.entry").split(",")[0];
     if (typeof entryId !== "string") return;
 
     const entry = assetSubscriber.entries.byId[entryId];

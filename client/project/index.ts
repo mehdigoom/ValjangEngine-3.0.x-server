@@ -11,7 +11,7 @@ function start() {
   document.body.hidden = false;
 
   // Development mode
-  if (localStorage.getItem("superpowers-dev-mode") != null) {
+  if (localStorage.getItem("ValjangEngine-dev-mode") != null) {
     const projectManagementDiv = document.querySelector(".project-management") as HTMLDivElement;
     projectManagementDiv.style.backgroundColor = "#37d";
 
@@ -25,7 +25,7 @@ function start() {
   const toggleNotificationsButton = document.querySelector(".top .controls button.toggle-notifications") as HTMLButtonElement;
   toggleNotificationsButton.addEventListener("click", onClickToggleNotifications);
 
-  if (localStorage.getItem("superpowers-disable-notifications") != null) {
+  if (localStorage.getItem("ValjangEngine-disable-notifications") != null) {
     toggleNotificationsButton.classList.add("disabled");
     toggleNotificationsButton.title = SupClient.i18n.t("project:header.notifications.enable");
   } else {
@@ -74,15 +74,15 @@ function onMessageHotKey(action: string) {
 }
 
 function onClickToggleNotifications(event: any) {
-  let notificationsDisabled = (localStorage.getItem("superpowers-disable-notifications") != null) ? true : false;
+  let notificationsDisabled = (localStorage.getItem("ValjangEngine-disable-notifications") != null) ? true : false;
   notificationsDisabled = !notificationsDisabled;
 
   if (!notificationsDisabled) {
-    localStorage.removeItem("superpowers-disable-notifications");
+    localStorage.removeItem("ValjangEngine-disable-notifications");
     event.target.classList.remove("disabled");
     event.target.title = SupClient.i18n.t("project:header.notifications.disable");
   } else {
-    localStorage.setItem("superpowers-disable-notifications", "true");
+    localStorage.setItem("ValjangEngine-disable-notifications", "true");
     event.target.classList.add("disabled");
     event.target.title = SupClient.i18n.t("project:header.notifications.enable");
   }

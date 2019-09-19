@@ -49,7 +49,7 @@ for (const entry of fs.readdirSync(systemsPath)) {
   try {
     const packageDataFile = fs.readFileSync(`${systemPath}/package.json`, { encoding: "utf8" });
     const packageData = JSON.parse(packageDataFile);
-    systemId = packageData.superpowers.systemId;
+    systemId = packageData.ValjangEngine.systemId;
     systemVersion = packageData.version;
   } catch (err) {
     emitError(`Could not load system id from systems/${entry}/package.json:`, err.stack);
@@ -123,7 +123,7 @@ type Registry = {
 };
 
 export function getRegistry(callback: (err: Error, registry: Registry) => any) {
-  const registryUrl = "https://raw.githubusercontent.com/superpowers/superpowers-registry/master/registry.json";
+  const registryUrl = "https://raw.githubusercontent.com/ValjangEngine/ValjangEngine-registry/master/registry.json";
   const request = https.get(registryUrl, (res) => {
     if (res.statusCode !== 200) {
       callback(new Error(`Unexpected status code: ${res.statusCode}`), null);
@@ -141,7 +141,7 @@ export function getRegistry(callback: (err: Error, registry: Registry) => any) {
       }
 
       if (registry.version !== currentRegistryVersion) {
-        callback(new Error("The registry format has changed. Please update Superpowers."), null);
+        callback(new Error("The registry format has changed. Please update ValjangEngine."), null);
       } else {
         const packageData = fs.readFileSync(`${__dirname}/../../package.json`, { encoding: "utf8" });
         const { version: localCoreVersion } = JSON.parse(packageData);
@@ -194,7 +194,7 @@ export function downloadRelease(downloadURL: string, downloadPath: string, callb
   https.get({
     hostname: "github.com",
     path: downloadURL,
-    headers: { "user-agent": "Superpowers" }
+    headers: { "user-agent": "ValjangEngine" }
   }, (res) => {
     if (res.statusCode !== 200) {
       callback(`Unexpected status code: ${res.statusCode}`);

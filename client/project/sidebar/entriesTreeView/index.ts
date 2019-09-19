@@ -126,7 +126,7 @@ function onEntryDragStart(event: DragEvent, entryElt: HTMLLIElement) {
   for (const node of widget.selectedNodes) {
     if (node.dataset["id"] !== id) entryIds.push(node.dataset["id"]);
   }
-  event.dataTransfer.setData("application/vnd.superpowers.entry", entryIds.join(","));
+  event.dataTransfer.setData("application/vnd.ValjangEngine.entry", entryIds.join(","));
   return true;
 }
 

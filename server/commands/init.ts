@@ -49,9 +49,9 @@ export default function init(systemId: string, pluginFullName: string) {
 
 function initSystem(systemId: string) {
   const packageJSON = JSON.stringify({
-    name: `superpowers-${systemId}`,
-    description: "A system for Superpowers, the HTML5 app for real-time collaborative projects",
-    superpowers: {
+    name: `ValjangEngine-${systemId}`,
+    description: "A system for ValjangEngine, the HTML5 app for real-time collaborative projects",
+    ValjangEngine: {
       systemId: systemId,
       publishedPluginBundles: []
     }
@@ -74,8 +74,8 @@ function initSystem(systemId: string) {
 function initPlugin(systemFolderName: string, systemId: string, pluginName: string) {
   const pluginSlug = pluginName.replace(/\//g, "-").replace(/[A-Z]/g, (x) => `-${x.toLowerCase()}`);
   const packageJSON = JSON.stringify({
-    name: `superpowers-${systemId}-${pluginSlug}-plugin`,
-    description: `Plugin for Superpowers ${systemId}`,
+    name: `ValjangEngine-${systemId}-${pluginSlug}-plugin`,
+    description: `Plugin for ValjangEngine ${systemId}`,
     scripts: {
       "build": "gulp --gulpfile=../../../../../scripts/pluginGulpfile.js --cwd=."
     }

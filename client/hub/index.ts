@@ -13,7 +13,7 @@ let socket: SocketIOClient.Socket;
 const port = (window.location.port.length === 0) ? (window.location.protocol === "https" ? "443" : "80") : window.location.port;
 
 const languageNamesById: { [id: string]: string; } = {};
-if (localStorage.getItem("superpowers-dev-mode") != null) languageNamesById["none"] = "None";
+if (localStorage.getItem("ValjangEngine-dev-mode") != null) languageNamesById["none"] = "None";
 
 function start() {
   ui.projectsTreeView = new TreeView(document.querySelector(".projects-tree-view") as HTMLElement, { multipleSelection: false });

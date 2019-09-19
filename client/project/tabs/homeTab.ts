@@ -16,7 +16,7 @@ export function onMessageChat(message: string) {
 
   if (!isHomeTabVisible) homeTab.classList.add("unread");
 
-  if (localStorage.getItem("superpowers-disable-notifications") != null) return;
+  if (localStorage.getItem("ValjangEngine-disable-notifications") != null) return;
 
   function doNotification() {
     const title = SupClient.i18n.t("project:header.notifications.new", { projectName: manifest.pub.name });

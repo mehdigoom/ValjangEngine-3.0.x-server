@@ -57,9 +57,9 @@ export default function start(serverDataPath: string) {
 
   loadConfig();
 
-  const { version, superpowers: { appApiVersion: appApiVersion } } = JSON.parse(fs.readFileSync(`${__dirname}/../../package.json`, { encoding: "utf8" }));
+  const { version, ValjangEngine: { appApiVersion: appApiVersion } } = JSON.parse(fs.readFileSync(`${__dirname}/../../package.json`, { encoding: "utf8" }));
   SupCore.log(`Server v${version} starting...`);
-  fs.writeFileSync(`${__dirname}/../../public/superpowers.json`, JSON.stringify({
+  fs.writeFileSync(`${__dirname}/../../public/ValjangEngine.json`, JSON.stringify({
     serverName: config.server.serverName, buildPort: config.server.buildPort,
     version, appApiVersion
   }, null, 2));
@@ -106,7 +106,7 @@ export default function start(serverDataPath: string) {
 
       if (credentials == null || !tsscmp(credentials.pass, config.server.password)) {
         res.status(401);
-        res.setHeader("WWW-Authenticate", `Basic realm="Superpowers server"`);
+        res.setHeader("WWW-Authenticate", `Basic realm="ValjangEngine server"`);
         res.end("Access denied.");
         return;
       }

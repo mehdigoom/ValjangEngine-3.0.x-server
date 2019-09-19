@@ -14,7 +14,7 @@ export default class ListById extends EventEmitter {
     let maxItemId = -1;
 
     for (const item of this.pub) {
-      // NOTE: Legacy stuff from Superpowers 0.4
+      // NOTE: Legacy stuff from ValjangEngine 0.4
       if (typeof item.id === "number") item.id = item.id.toString();
 
       this.byId[item.id] = item;

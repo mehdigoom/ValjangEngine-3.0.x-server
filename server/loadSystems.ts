@@ -13,7 +13,7 @@ export default function(mainApp: express.Express, buildApp: express.Express, cal
     const systemPath = path.join(SupCore.systemsPath, systemFolderName);
     if (!fs.statSync(systemPath).isDirectory()) { cb(); return; }
 
-    const systemId = JSON.parse(fs.readFileSync(path.join(SupCore.systemsPath, systemFolderName, "package.json"), { encoding: "utf8" })).superpowers.systemId;
+    const systemId = JSON.parse(fs.readFileSync(path.join(SupCore.systemsPath, systemFolderName, "package.json"), { encoding: "utf8" })).ValjangEngine.systemId;
     SupCore.system = SupCore.systems[systemId] = new SupCore.System(systemId, systemFolderName);
 
     // Expose public stuff

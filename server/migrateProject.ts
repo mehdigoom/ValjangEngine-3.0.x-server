@@ -19,7 +19,7 @@ function migrateTo1(server: ProjectServer, callback: (err: Error) => any) {
   const assetsPath = path.join(server.projectPath, "assets");
 
   async.series([
-    // Delete ArcadePhysics2DSettingsResource, removed in Superpowers v0.13
+    // Delete ArcadePhysics2DSettingsResource, removed in ValjangEngine v0.13
     // FIXME: This should be done by an init function in the plugin, probably.
     (cb) => { fs.unlink(path.join(server.projectPath, "resources/arcadePhysics2DSettings/resource.json"), (err) => { cb(); }); },
     (cb) => { fs.rmdir(path.join(server.projectPath, "resources/arcadePhysics2DSettings"), (err) => { cb(); }); },

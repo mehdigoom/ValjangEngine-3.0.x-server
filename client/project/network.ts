@@ -84,7 +84,7 @@ function onManifestReceived(err: string, manifestPub: SupCore.Data.ProjectManife
   manifest = new SupCore.Data.ProjectManifest(manifestPub);
 
   document.querySelector(".project-name").textContent = manifestPub.name;
-  document.title = `${manifestPub.name} — Superpowers`;
+  document.title = `${manifestPub.name} — ValjangEngine`;
 }
 
 function onEntriesReceived(err: string, entriesPub: SupCore.Data.EntryNode[], nextEntryId: number) {
@@ -101,7 +101,7 @@ function onSetManifestProperty(key: string, value: any) {
 
   switch (key) {
     case "name":
-      document.title = `${value} — Superpowers`;
+      document.title = `${value} — ValjangEngine`;
       document.querySelector(".project-name").textContent = value;
       break;
   }
