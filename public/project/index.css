@@ -150,7 +150,7 @@ body {
 
 .entries-tree-view .tree li,
 .find-asset-dialog .tree li {
-    color: rgb(255, 253, 253);
+    color: rgb(0, 0, 0);
 }
 
 .entries-tree-view .tree li>img,
@@ -166,7 +166,7 @@ body {
 
 .entries-tree-view .tree li:not(.selected):hover,
 .find-asset-dialog .tree li:not(.selected):hover {
-    background: #e0e0e0
+    background: #3a3a3a
 }
 
 .entries-tree-view .tree .name,
@@ -204,7 +204,7 @@ body {
 }
 
 .open-in-new-window:hover {
-    background-color: rgba(0, 0, 0, 0.1)
+    background-color: rgba(0, 0, 0, 0.794)
 }
 
 .open-in-new-window:active {
