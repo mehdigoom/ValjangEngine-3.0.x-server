@@ -34,8 +34,10 @@ body {
 }
 
 .main .chat ol li {
-    margin-bottom: .25em;
-    padding: .125em;
+    margin-bottom: .100em;
+    padding: .150em;
+    background: rgba(5, 5, 5, 0.226);
+    position: relative;
 }
 
 .main .chat ol li.day-separator {
@@ -50,7 +52,7 @@ body {
     height: 1px;
     margin: .5em 0;
     border: none;
-    background: rgb(65, 65, 65)
+    background: rgb(0, 0, 0)
 }
 
 .main .chat ol li.day-separator>div {
@@ -62,6 +64,7 @@ body {
 
 .main .chat ol li.day-separator>div>div {
     display: inline-block;
+    border-radius: 50%;
     padding: 0 1em;
     background: rgb(255, 192, 192)
 }
@@ -73,7 +76,12 @@ body {
 }
 
 .main .chat .author {
-    font-weight: bold
+    display: inline-block;
+    font-weight: bold;
+    color: black;
+    border-radius: 20%;
+    padding: 0 2em;
+    background: linear-gradient(rgb(249, 249, 250), rgb(240, 136, 136));
 }
 
 .main .chat-input {
