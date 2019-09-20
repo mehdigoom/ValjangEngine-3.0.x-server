@@ -1,4 +1,6 @@
 body {
+    background-color: #888;
+    color: azure;
     display: flex
 }
 
@@ -48,7 +50,7 @@ body {
     height: 1px;
     margin: .5em 0;
     border: none;
-    background: #ccc
+    background: rgb(65, 65, 65)
 }
 
 .main .chat ol li.day-separator>div {
@@ -61,7 +63,7 @@ body {
 .main .chat ol li.day-separator>div>div {
     display: inline-block;
     padding: 0 1em;
-    background: #fff
+    background: rgb(255, 192, 192)
 }
 
 .main .chat .timestamp {
@@ -77,7 +79,7 @@ body {
 .main .chat-input {
     border-top: 1px solid #ccc;
     padding: .5em;
-    background: #eee;
+    background: rgb(245, 200, 200);
     line-height: 0
 }
 
@@ -105,12 +107,15 @@ body {
 }
 
 .sidebar .links {
-    background: #eee;
+    background: rgb(184, 183, 183);
+    color: red;
     padding: 1em;
     border-bottom: 1px solid #ddd
 }
 
 .sidebar .members {
     flex: 1 1 0;
-    padding: 1em
+    padding: 1em;
+    color: beige;
+    background: #3b3b3bab
 }
