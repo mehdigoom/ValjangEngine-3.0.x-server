@@ -10,8 +10,8 @@ export interface Config {
 
 export const defaults: Config = {
   serverName: null,
-  mainPort: 4237,
-  buildPort: 4238,
+  mainPort: 4200,
+  buildPort: 4201,
   password: "",
   sessionSecret: null,
   maxRecentBuilds: 10
