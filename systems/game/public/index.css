@@ -24,7 +24,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    color: #444;
+    color: rgb(0, 0, 0);
     font-size: 24px;
     font-family: sans-serif;
     text-transform: uppercase;
@@ -55,12 +55,6 @@ body {
     pointer-events: none
 }
 
-#loading img {
-    width: 540px;
-    height: 160px;
-    max-width: 100%
-}
-
 #loading progress {
     background: #c4c8b7;
     border: none;
@@ -80,7 +74,7 @@ body {
 }
 
 #loading progress::-moz-progress-bar {
-    background: #a5a49e
+    background: #000000
 }
 
 #loading .error {
