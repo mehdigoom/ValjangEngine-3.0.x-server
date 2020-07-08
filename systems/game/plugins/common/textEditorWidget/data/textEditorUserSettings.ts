@@ -11,12 +11,12 @@ export let pub: {
 } = item != null ? JSON.parse(item) : {
   formatVersion: 2,
   keyMap: "sublime",
-  theme: "default"
+  theme: "blackboard"
 };
 
 if (pub.formatVersion === 1) {
   pub.formatVersion = 2;
-  edit("theme", "default");
+  edit("theme", "blackboard");
 }
 
 export const emitter = new EventEmitter();
