@@ -98,7 +98,7 @@ function onEntriesReceived(theEntries: SupCore.Data.Entries) {
   systemBuildFiles.push(`${systemPath}/plugins.json`);
   systemBuildFiles.push(`${systemPath}/index.html`);
   systemBuildFiles.push(`${systemPath}/index.css`);
-  systemBuildFiles.push(`${systemPath}/images/ValjangEngine-splash.svg`);
+  systemBuildFiles.push(`${systemPath}/images/logo.png`);
   systemBuildFiles.push(`${systemPath}/SupEngine.js`);
   systemBuildFiles.push(`${systemPath}/SupRuntime.js`);
 
