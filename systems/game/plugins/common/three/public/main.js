@@ -21542,7 +21542,7 @@ exports.Ticker = Ticker;
 			_width = _canvas.width,
 			_height = _canvas.height,
 
-			_pixelRatio = 5,
+			_pixelRatio = 1,
 
 			_viewport = new Vector4( 0, 0, _width, _height ),
 			_scissor = new Vector4( 0, 0, _width, _height ),
