@@ -25,7 +25,8 @@
     "extra/p2js",
     "extra/rngjs",
     "extra/socketio",
-    "extra/tweenjs"
+    "extra/tweenjs",
+    "extra/Visual"
   ],
   "paths": {
     "editors": {
@@ -38,8 +39,7 @@
       "sprite": "default/sprite",
       "tileMap": "default/tileMap",
       "tileSet": "default/tileMap",
-      "script": "default/typescript",
-      "Visual": "default/Visual"
+      "script": "default/typescript"
     },
     "tools": {
       "documentation": "common/documentation",
