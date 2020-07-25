@@ -38,7 +38,8 @@
       "sprite": "default/sprite",
       "tileMap": "default/tileMap",
       "tileSet": "default/tileMap",
-      "script": "default/typescript"
+      "script": "default/typescript",
+      "Visual": "default/Visual"
     },
     "tools": {
       "documentation": "common/documentation",
